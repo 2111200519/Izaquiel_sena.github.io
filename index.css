@@ -1,5 +1,8 @@
-button {
-    font-family: Big Noodle Titling;
-    margin: 10;
-    background-color: blue;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  font-family: Arial, sans-serif;
 }
