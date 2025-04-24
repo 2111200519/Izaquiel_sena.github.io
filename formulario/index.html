@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -41,15 +40,37 @@
             
             <div>
                 <input type='radio' name="estilo"  id="estiloRock" />
-                <label for="estiloRock">Otimo</label>                
+                <label for="estiloRock">Rock</label>                
             </div>
             <div>
-                <label for="estiloPop">Médio</label>
                 <input type='radio' name="estilo" id="estiloPop" />
+                <label for="estiloPop">Pop</label>
             </div>  
             <div>
-                <label for="estiloSertanejo">Fraco</label>
                 <input type='radio' name="estilo" id="estiloSertanejo" />
+                <label for="estiloSertanejo">Sertanejo</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label >Qualidades</label>
+            <div>
+                <input type='checkbox' name="qualidade[]" id="qualidadeVoz" />
+                <label for="qualidadeVoz">Voz</label>
+            </div>
+            <div>
+                <input type='checkbox' name="qualidade[]" id="qualidadeLetra" />
+                <label for="qualidadeLetra">Letra</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label >Efeitos na gente</label>
+            <div>
+                <input type='checkbox' name="adjetivosCalma" id="adjetivosCalma" />
+                <label for="adjetivosCalma">Calma</label>
+            </div>
+            <div>
+                <input type='checkbox' name="adjetivosRelaxante" id="adjetivosRelaxante" />
+                <label for="adjetivosRelaxante">Relaxante</label>
             </div>
         </fieldset>
         <div>
@@ -111,8 +132,8 @@
         </div>   
 
         <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
 
     </form>
 </body>
 </html>
-
