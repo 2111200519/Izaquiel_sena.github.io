@@ -1,1 +1,115 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Meu Blog</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- Bootstrap CSS --> 
+  <link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head> 
+<body> 
+ 
+  <!-- Navbar --> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="#">Meu Blog</a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" databs-target="#navbarNav"> 
+        <span class="navbar-toggler-icon"></span> 
+      </button> 
+      <div class="collapse navbar-collapse" id="navbarNav"> 
+        <ul class="navbar-nav ms-auto"> 
+          <li class="nav-item"><a class="nav-link" href="#">Início</a></li> 
+          <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li> 
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li> 
+        </ul>       </div> 
+    </div> 
+  </nav> 
+ 
+  <!-- Alerta --> 
+  <div class="alert alert-info text-center m-0">     Bem-vindo ao meu blog! 
+  </div> 
+ 
+  <div class="container mt-4"> 
+    <div class="row"> 
+      <!-- Conteúdo Principal --> 
+      <div class="col-md-8"> 
+        <?php 
+        $posts = [ 
+          [ 
+            "titulo" => "Primeira Postagem", 
+            "data" => "16 de Junho de 2025", 
+            "imagem" => "https://via.placeholder.com/800x400", 
+            "conteudo" => "Este é o primeiro post do blog. Aqui você pode compartilhar suas ideias, notícias ou qualquer tipo de conteúdo com seus leitores. Aproveite a liberdade criativa!" 
+          ], 
+          [ 
+            "titulo" => "Dicas de Programação", 
+            "data" => "15 de Junho de 2025", 
+            "imagem" => "https://via.placeholder.com/800x400", 
+            "conteudo" => "Neste post, compartilhamos algumas dicas úteis de programação para iniciantes e profissionais. Desde boas práticas até truques de produtividade!" 
+          ], 
+          [ 
+            "titulo" => "Explorando o Bootstrap", 
+            "data" => "14 de Junho de 2025", 
+            "imagem" => "https://via.placeholder.com/800x400", 
+            "conteudo" => "Bootstrap é um dos frameworks mais utilizados para design responsivo. Aprenda a usá-lo para criar layouts incríveis com pouco esforço." 
+          ] 
+        ]; 
+ 
+        foreach ($posts as $post) { 
+          echo ' 
+            <div class="card mb-4"> 
+              <img src="'.$post["imagem"].'" class="card-img-top" alt="Imagem da postagem"> 
+              <div class="card-body"> 
+                <h5 class="card-title">'.$post["titulo"].'</h5> 
+                <p class="card-text"><small class="textmuted">'.$post["data"].'</small></p> 
+                <p class="card-text">'.substr($post["conteudo"], 0, 150).'...</p> 
+                <a href="#" class="btn btn-primary">Leia mais...</a> 
+              </div> 
+            </div> 
+          '; 
+        } 
+        ?> 
+      </div> 
+ 
+      <!-- Sidebar --> 
+      <div class="col-md-4"> 
+        <div class="card mb-4"> 
+          <div class="card-header bg-secondary text-white">Sobre o Autor</div> 
+          <div class="card-body"> 
+            <p>Olá! Eu sou um desenvolvedor apaixonado por tecnologia, programação e ensino. Este blog é meu espaço para compartilhar conhecimento.</p> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+ 
+    <!-- Rodapé com formulário --> 
+    <footer class="bg-dark text-white p-4 mt-4"> 
+      <div class="row"> 
+        <div class="col-md-6"> 
+          <h5>Contato</h5> 
+          <p>Email: contato@meublog.com</p> 
+          <p>Telefone: (99) 99999-9999</p> 
+        </div> 
+        <div class="col-md-6"> 
+          <form> 
+            <div class="mb-2"> 
+              <label for="email" class="form-label">Seu Email</label> 
+              <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com"> 
+            </div> 
+            <div class="mb-2"> 
+              <label for="mensagem" class="form-label">Mensagem</label> 
+              <textarea class="form-control" id="mensagem" rows="2"></textarea> 
+            </div> 
+            <button type="submit" class="btn btn-secondary">Enviar</button> 
+          </form> 
+        </div> 
+      </div> 
+    </footer> 
+  </div> 
+ 
+  <!-- Bootstrap JS --> 
+  <script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j s"></script> </body> 
+</html> 
 
